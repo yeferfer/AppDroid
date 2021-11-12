@@ -1,6 +1,6 @@
 # AppDroid 
 
-En este proyecto encontraremos una aplicación móvil, en el cual podrás realizar una consulta de viaje, haciendo un recorrido virtual de una ciudad "No definida" ✈️🛩️
+En este proyecto encontraremos una aplicación móvil, en el cual podrás realizar una consulta de puntos de interes, haciendo un recorrido virtual en la ciudad de NEW YORK ✈️🛩️
 
 ## Comenzando 🚀
 
