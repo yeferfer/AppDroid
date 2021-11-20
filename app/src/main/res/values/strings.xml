@@ -6,8 +6,15 @@ poblado que se encuentra entre los principales centros comerciales, financieros 
 Sus sitios icónicos incluyen rascacielos, como el Empire State Building, y el amplio Central Park.
 El teatro Broadway se ubica en la zona del Times Square iluminada con neones.</string>
 
-<string name="description_Londres">Londres, la capital de Inglaterra y del Reino Unido, es una ciudad del siglo XXI con una historia que se remonta a la época romana.
-    En su centro se alzan el imponente Palacio del Parlamento, la torre del icónico reloj "Big Ben" y la Abadía de Westminster, lugar de las coronaciones monárquicas
-    británicas. Al otro lado del río Támesis, la rueda de observación London Eye ofrece vistas panorámicas del complejo cultural South Bank y de toda la ciudad. .</string>
+    <string name="description_Madame">El Museo Madame Tussauds es el museo de cera más conocido en el mundo. Posee la colección más grande de figuras de celebridades.
+        La sede central del museo está en Londres, pero también hay establecimientos en otras grandes ciudades alrededor del mundo.</string>
+
+    <string name="description_Observatorio">Situado en la parte baja de Manhattan, el Observatorio One World presenta un mirador de última generación a 102 pisos de altura.
+        Viaja directamente a su cima en 47 segundos en el ascensor SkyPod y profundiza en la historia cultural y financiera de la ciudad con una serie de exposiciones interactivas e interesantes charlas dirigidas por los embajadores del tour.</string>
+
+    <string name="description_monumento">El monumento del 11 de septiembre, situado en la misma ubicación que el antiguo World Trade Center, rinde homenaje a las 2983 víctimas de los ataques de 2001 y 1993.</string>
+
+    <string name="description_Edge">Edge es la nueva y emocionante atracción turística de la ciudad de Nueva York, situada en lo alto del fabuloso y reluciente rascacielos Hudson Yards. Subirás 100 pisos en su moderno ascensor y, después, podrás
+        salir al aire libre en su amplio mirador para deleitarte con las vistas del horizonte más famoso del mundo.</string>
 
 </resources>
