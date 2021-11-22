@@ -23,13 +23,13 @@ android:gravity="center_vertical">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/custom_button"
-        android:drawableLeft="@drawable/ic_launcher_foreground"
-        android:text="POI_1"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_button_poi1"
+        android:drawableLeft="@mipmap/ic_poi1_foreground"
+        android:text="Statue of Liberty"
         android:textColor="@color/white"
-        android:textStyle="bold" />
-
+        android:textStyle="normal"
+        android:textSize="18dp"/>
 
 
     <Button
@@ -37,32 +37,39 @@ android:gravity="center_vertical">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:text="POI_2"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_button_poi2"
+        android:drawableLeft="@mipmap/ic_poi2_foreground"
+        android:text="Museum Madame Tussauds"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp"/>
+        android:textStyle="normal"
+        android:textSize="18dp" />
 
     <Button
         android:id="@+id/btnPoi3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:text="POI_3"
-        android:background="@drawable/custom_button"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_button_poi3"
+        android:drawableLeft="@mipmap/ic_poi3_foreground"
+        android:text="One World Observatory"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp"/>
+        android:textStyle="normal"
+        android:textSize="18dp" />
 
     <Button
         android:id="@+id/btnPoi4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:text="POI_4"
-        android:background="@drawable/custom_button"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_button_poi4"
+        android:drawableLeft="@mipmap/ic_poi4_foreground"
+        android:text="911 museum"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp"/>
+        android:textStyle="normal"
+        android:textSize="18dp" />
 
 
     <Button
@@ -70,11 +77,12 @@ android:gravity="center_vertical">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:text="POI_5"
-        android:background="@drawable/custom_button"
+        android:background="@drawable/custom_button_poi5"
+        android:drawableLeft="@mipmap/ic_poi5_foreground"
+        android:text="Edge"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        />
+        android:textStyle="normal"
+        android:textSize="18dp" />
 
 
 </LinearLayout>
