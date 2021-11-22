@@ -15,6 +15,7 @@
         android:background="@color/white"
         android:orientation="vertical">
 
+
         <TextView
             android:id="@+id/liberty"
             android:layout_width="wrap_content"
