@@ -22,7 +22,7 @@ Para la instalación correcta del proyecto sigue los siguientes pasos
 
 ![image](https://user-images.githubusercontent.com/48194337/141157235-3d6264ab-333f-4656-9068-8014522192a2.png)  
 
-3. ingresa los siguientes comandos
+3. ingresa los siguientes comandos:
   * git init
   * git clone "https://github.com/yeferfer/AppDroid.git"
   
