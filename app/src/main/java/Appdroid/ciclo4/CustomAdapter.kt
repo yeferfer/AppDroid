@@ -1,19 +1,19 @@
 package Appdroid.ciclo4
 
-import android.graphics.Color
-import android.text.style.BackgroundColorSpan
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 
-class CustomAdapter : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
-
-
+class CustomAdapter(
+    private val contexto: Context
+) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     val titles = arrayOf(
         "STATUE OF LIBERTY",
@@ -65,29 +65,33 @@ class CustomAdapter : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
+
         val v =
             LayoutInflater.from(viewGroup.context).inflate(R.layout.card_layout, viewGroup, false)
-        return ViewHolder(v)
+        return ViewHolder(v, contexto)
+
+
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
         viewHolder.itemTitle.text = titles[i]
         viewHolder.itemDetail.text = details[i]
         viewHolder.itemImage.setImageResource(images[i])
-        viewHolder.itemStar.rating= stars[i]
+        viewHolder.itemStar.rating = stars[i]
         viewHolder.itemStarScore.text = starScore[i]
+
     }
 
     override fun getItemCount(): Int {
         return titles.size
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View, contexto: Context) : RecyclerView.ViewHolder(itemView) {
         var itemImage: ImageView
         var itemTitle: TextView
         var itemDetail: TextView
-        var itemStar:RatingBar
-        var itemStarScore:TextView
+        var itemStar: RatingBar
+        var itemStarScore: TextView
 
         init {
             itemImage = itemView.findViewById(R.id.item_image)
@@ -95,7 +99,16 @@ class CustomAdapter : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
             itemDetail = itemView.findViewById(R.id.item_description)
             itemStar = itemView.findViewById(R.id.starCard)
             itemStarScore = itemView.findViewById(R.id.starScore)
+
+            itemView.setOnClickListener {
+                val inte = Intent(contexto, PoiActivity1::class.java)
+                contexto.startActivity(inte)
+
+
+            }
         }
+
+
     }
 }
 
