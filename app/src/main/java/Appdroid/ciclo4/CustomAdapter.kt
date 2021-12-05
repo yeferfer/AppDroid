@@ -101,8 +101,27 @@ class CustomAdapter(
             itemStarScore = itemView.findViewById(R.id.starScore)
 
             itemView.setOnClickListener {
-                val inte = Intent(contexto, PoiActivity1::class.java)
-                contexto.startActivity(inte)
+                if ((itemTitle.text).equals("STATUE OF LIBERTY")) {
+                    val inte = Intent(contexto, PoiActivity1::class.java)
+                    contexto.startActivity(inte)
+                    // println(" impresion " + itemTitle.text)
+                }else if ((itemTitle.text).equals("MUSEUM MADAME TUSSAUDS")) {
+                    val inte = Intent(contexto, PoiActivity2::class.java)
+                    contexto.startActivity(inte)
+
+                }else if ((itemTitle.text).equals("ONE WORLD OBSERVATORY")) {
+                    val inte = Intent(contexto, PoiActivity3::class.java)
+                    contexto.startActivity(inte)
+
+                }else if ((itemTitle.text).equals("911 MUSEUM")) {
+                    val inte = Intent(contexto, PoiActivity4::class.java)
+                    contexto.startActivity(inte)
+
+                }else if ((itemTitle.text).equals("EDGE")) {
+                    val inte = Intent(contexto, PoiActivity5::class.java)
+                    contexto.startActivity(inte)
+
+                }
 
 
             }
