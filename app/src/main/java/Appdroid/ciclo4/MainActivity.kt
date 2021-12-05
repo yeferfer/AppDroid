@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
+
         drawer.addDrawerListener(toggle)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -58,12 +59,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.nav_item_one -> Toast.makeText(this,"Pues ya nos fuimos Carnal!", Toast.LENGTH_LONG).show()
+            R.id.nav_item_one -> Toast.makeText(applicationContext,"Andale!", Toast.LENGTH_LONG).show()
         }
         drawer.closeDrawer(GravityCompat.START)
         return true
     }
 
-    override fun onPostCreate(savedInstanceState: Bundle?) {
+   /* override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
         toggle.syncState()
     }
@@ -71,7 +73,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         toggle.onConfigurationChanged(newConfig)
-    }
+    }*/
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

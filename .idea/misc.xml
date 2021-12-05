@@ -37,6 +37,7 @@
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.19427083333333334" />
         <entry key="app/src/main/res/layout/nav_header_main6.xml" value="0.19427083333333334" />
         <entry key="app/src/main/res/layout/nav_header_main7.xml" value="0.19427083333333334" />
+        <entry key="app/src/main/res/layout/settings_activity.xml" value="0.3494791666666667" />
         <entry key="app/src/main/res/menu/activity_main6_drawer.xml" value="0.19427083333333334" />
         <entry key="app/src/main/res/menu/activity_main7_drawer.xml" value="0.19427083333333334" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.19427083333333334" />
@@ -44,6 +45,7 @@
         <entry key="app/src/main/res/menu/main_activity6.xml" value="0.3494791666666667" />
         <entry key="app/src/main/res/menu/main_activity7.xml" value="0.33" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/xml/root_preferences.xml" value="0.3494791666666667" />
       </map>
     </option>
   </component>

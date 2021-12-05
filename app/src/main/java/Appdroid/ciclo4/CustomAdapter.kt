@@ -118,7 +118,7 @@ class CustomAdapter(
                     contexto.startActivity(inte)
 
                 }else if ((itemTitle.text).equals("EDGE")) {
-                    val inte = Intent(contexto, PoiActivity5::class.java)
+                    val inte = Intent(contexto, SettingsActivity::class.java)
                     contexto.startActivity(inte)
 
                 }

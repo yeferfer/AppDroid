@@ -18,4 +18,21 @@ El teatro Broadway se ubica en la zona del Times Square iluminada con neones.</s
         salir al aire libre en su amplio mirador para deleitarte con las vistas del horizonte más famoso del mundo.</string>
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_close">Close</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="config_header">Configuración</string>
+    <string name="notificaciones_header">Notificaciones</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="notific_title">Notificaciones ON/OFF</string>
+    <string name="notificSound_title">Sonido Notificaciones ON/OFF</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>
