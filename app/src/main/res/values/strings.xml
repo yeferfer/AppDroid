@@ -16,5 +16,6 @@ El teatro Broadway se ubica en la zona del Times Square iluminada con neones.</s
 
     <string name="description_Edge">Edge es la nueva y emocionante atracción turística de la ciudad de Nueva York, situada en lo alto del fabuloso y reluciente rascacielos Hudson Yards. Subirás 100 pisos en su moderno ascensor y, después, podrás
         salir al aire libre en su amplio mirador para deleitarte con las vistas del horizonte más famoso del mundo.</string>
-
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
 </resources>

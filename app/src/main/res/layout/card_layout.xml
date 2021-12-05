@@ -43,11 +43,10 @@
             android:layout_below="@id/item_title"
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@id/item_image"
+            android:paddingRight="10dp"
             android:text="Descripción"
             android:textColor="@color/white"
-            android:paddingRight="10dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <LinearLayout
             android:id="@+id/star"
@@ -56,8 +55,8 @@
             android:layout_below="@id/item_description"
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@id/item_image"
-            android:paddingLeft="90dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="90dp">
 
             <RatingBar
                 android:id="@+id/starCard"
@@ -74,12 +73,12 @@
             android:id="@+id/starScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/star"
             android:layout_below="@id/item_description"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="6dp"
-            android:textColor="@color/white"
-            android:text="Score" />
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/star"
+            android:text="Score"
+            android:textColor="@color/white" />
 
     </RelativeLayout>
 
