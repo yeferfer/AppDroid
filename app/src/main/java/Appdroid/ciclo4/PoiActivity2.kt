@@ -14,5 +14,14 @@ class PoiActivity2 : AppCompatActivity() {
             val regresa = Intent(this, MainActivity::class.java)
             startActivity(regresa)
         }
+        val btnMap = findViewById<Button>(R.id.button)
+        btnMap.setOnClickListener {
+            var latIntent = Intent(this@PoiActivity2,MapsActivity::class.java)
+            latIntent.putExtra("lat", 40.7564)
+            latIntent.putExtra("long", -73.9888)
+            startActivity(latIntent)
+            val gotoMap = Intent(this, MapsActivity::class.java)
+            startActivity(gotoMap)
+        }
     }
 }
