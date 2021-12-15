@@ -22,7 +22,6 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="Museo Madame Tussauds"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -71,7 +70,6 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="32dp"
             android:justificationMode="inter_word"
-            android:text="@string/description_Madame"
             android:textColor="@color/black"
             android:textSize="16sp" />
 

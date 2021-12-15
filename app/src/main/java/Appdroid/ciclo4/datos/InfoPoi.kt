@@ -1,6 +1,6 @@
 package Appdroid.ciclo4.datos
 
-class infoPoi{
+class InfoPoi{
     var titulo : String? = null
     var descripcion : String? = null
 
