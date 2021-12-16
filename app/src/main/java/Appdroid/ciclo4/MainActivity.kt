@@ -16,9 +16,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 import java.io.File
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
+
     private var listaPoi = mutableListOf<InfoPoi>()
     val nombreArchivo = "pois.txt"
     private val controlJson = ControladorArchivoJson()
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         this.supportActionBar?.hide()
         setContentView(R.layout.activity_main)
+
 
         //Informacion archivo Json
         archivo = File(this.applicationContext.filesDir, nombreArchivo)
@@ -76,16 +78,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         drawer = findViewById(R.id.drawer_layout)
 
-        toggle = ActionBarDrawerToggle(
-            this,
-            drawer,
-            toolbar,
-            R.string.navigation_drawer_open,
-            R.string.navigation_drawer_close
-        )
-
+        toggle = ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer.addDrawerListener(toggle)
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
 
@@ -97,13 +91,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     /**** Aca se configura la navegacion de los items del menú desplegable desde la izquierda ****/
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_item_one -> Toast.makeText(
-                this,
-                "Pues ya nos fuimos Carnal!",
-                Toast.LENGTH_LONG
-            ).show()
-            R.id.nav_item_one -> Toast.makeText(applicationContext, "Andale!", Toast.LENGTH_LONG)
-                .show()
+            R.id.nav_item_one -> Toast.makeText(this, "Clicked item one", Toast.LENGTH_SHORT).show()
+            R.id.nav_item_two -> Toast.makeText(this, "Clicked item two", Toast.LENGTH_SHORT).show()
+            R.id.nav_item_three -> Toast.makeText(this, "Clicked item three", Toast.LENGTH_SHORT).show()
+            R.id.nav_item_four -> Toast.makeText(this, "Clicked item four", Toast.LENGTH_SHORT).show()
+            R.id.nav_item_five -> Toast.makeText(this, "Clicked item five", Toast.LENGTH_SHORT).show()
+
         }
         drawer.closeDrawer(GravityCompat.START)
         return true
@@ -126,5 +119,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         return super.onOptionsItemSelected(item)
     }
+
+  /*  override fun onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
+    }*/
 
 }
