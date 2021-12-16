@@ -3,6 +3,7 @@ package Appdroid.ciclo4
 import Appdroid.ciclo4.archivojson.ControladorArchivoJson
 import android.content.Intent
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +19,13 @@ class PoiActivity1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_poi1)
 
+        //Pantalla completa
+        this.getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+
+        //Documento Json
         archivo = File(this.applicationContext.filesDir, "pois.txt")
 
         val titulo = findViewById<TextView>(R.id.liberty)

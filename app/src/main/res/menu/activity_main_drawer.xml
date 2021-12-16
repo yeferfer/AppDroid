@@ -2,19 +2,29 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group>
-        <item android:id="@+id/nav_item_one"
-            android:title="Perfil" />
-        <item android:id="@+id/nav_item_two"
-            android:title="Soporte" />
+        <item
+            android:id="@+id/nav_config"
+            android:title="Configuracion" />
+    </group>
 
+    <group>
+        <item
+            android:id="@+id/nav_item_one"
+            android:title="Perfil" />
+        <item
+            android:id="@+id/nav_item_two"
+            android:title="Soporte" />
     </group>
 
     <group android:id="@+id/group_menu">
-        <item android:id="@+id/nav_item_three"
+        <item
+            android:id="@+id/nav_item_three"
             android:title="Contactenos" />
-        <item android:id="@+id/nav_item_four"
+        <item
+            android:id="@+id/nav_item_four"
             android:title="Ayuda" />
-        <item android:id="@+id/nav_item_five"
+        <item
+            android:id="@+id/nav_item_five"
             android:title="Cerrar" />
     </group>
 </menu>

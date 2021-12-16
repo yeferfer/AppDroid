@@ -4,7 +4,8 @@ import Appdroid.ciclo4.archivojson.ControladorArchivoJson
 import Appdroid.ciclo4.datos.InfoPoi
 import android.content.res.Configuration
 import android.os.Bundle
-import android.view.MenuItem
+import android.view.*
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 import java.io.File
 
-class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
 
@@ -30,6 +31,11 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
         this.supportActionBar?.hide()
         setContentView(R.layout.activity_main)
 
+        //Pantalla completa
+        this.getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
 
         //Informacion archivo Json
         archivo = File(this.applicationContext.filesDir, nombreArchivo)
@@ -78,7 +84,13 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
 
         drawer = findViewById(R.id.drawer_layout)
 
-        toggle = ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        toggle = ActionBarDrawerToggle(
+            this,
+            drawer,
+            toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
+        )
         drawer.addDrawerListener(toggle)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
@@ -88,19 +100,44 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
 
     }
 
-    /**** Aca se configura la navegacion de los items del menú desplegable desde la izquierda ****/
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.nav_item_one -> Toast.makeText(this, "Clicked item one", Toast.LENGTH_SHORT).show()
-            R.id.nav_item_two -> Toast.makeText(this, "Clicked item two", Toast.LENGTH_SHORT).show()
-            R.id.nav_item_three -> Toast.makeText(this, "Clicked item three", Toast.LENGTH_SHORT).show()
-            R.id.nav_item_four -> Toast.makeText(this, "Clicked item four", Toast.LENGTH_SHORT).show()
-            R.id.nav_item_five -> Toast.makeText(this, "Clicked item five", Toast.LENGTH_SHORT).show()
-
-        }
-        drawer.closeDrawer(GravityCompat.START)
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.activity_main_drawer, menu)
         return true
     }
+
+    override fun onOptionsItemSelected(item:MenuItem): Boolean {
+        // Handle item selection
+        return when (item.itemId) {
+            R.id.nav_config -> {
+                Toast.makeText(this, "Clicked config", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.nav_item_one -> {
+                Toast.makeText(this, "Item1", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.nav_item_two -> {
+                Toast.makeText(this, "Item2", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.nav_item_three -> {
+                Toast.makeText(this, "Item3", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.nav_item_four -> {
+                Toast.makeText(this, "Item4", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.nav_item_five -> {
+                Toast.makeText(this, "Item5", Toast.LENGTH_SHORT).show()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    /**** Aca se configura la navegacion de los items del menú desplegable desde la izquierda ****/
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
@@ -112,20 +149,17 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
         toggle.onConfigurationChanged(newConfig)
     }
 
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (toggle.onOptionsItemSelected(item)) {
-            return true
-        }
-        return super.onOptionsItemSelected(item)
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        TODO("Not yet implemented")
     }
 
-  /*  override fun onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START)
-        } else {
-            super.onBackPressed()
-        }
-    }*/
+
+    /*  override fun onBackPressed() {
+          if (drawer.isDrawerOpen(GravityCompat.START)) {
+              drawer.closeDrawer(GravityCompat.START)
+          } else {
+              super.onBackPressed()
+          }
+      }*/
 
 }
