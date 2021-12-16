@@ -3,12 +3,18 @@
 
     <group>
         <item android:id="@+id/nav_item_one"
-            android:icon="@drawable/abc_vector_test"
-            android:title="Configuracion"/>
-
+            android:title="Perfil" />
         <item android:id="@+id/nav_item_two"
-            android:icon="@drawable/abc_vector_test"
-            android:title="Otros"/>
+            android:title="Soporte" />
 
+    </group>
+
+    <group android:id="@+id/group_menu">
+        <item android:id="@+id/nav_item_three"
+            android:title="Contactenos" />
+        <item android:id="@+id/nav_item_four"
+            android:title="Ayuda" />
+        <item android:id="@+id/nav_item_five"
+            android:title="Cerrar" />
     </group>
 </menu>
