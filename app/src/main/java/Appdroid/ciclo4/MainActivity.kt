@@ -2,6 +2,7 @@ package Appdroid.ciclo4
 
 import Appdroid.ciclo4.archivojson.ControladorArchivoJson
 import Appdroid.ciclo4.datos.InfoPoi
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.*
@@ -110,27 +111,27 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle item selection
         return when (item.itemId) {
             R.id.nav_config -> {
-                Toast.makeText(this, "Clicked config", Toast.LENGTH_SHORT).show()
+                startActivity(Intent( this, SettingsActivity::class.java))
                 true
             }
             R.id.nav_item_one -> {
-                Toast.makeText(this, "Item1", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Clicked Perfil", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.nav_item_two -> {
-                Toast.makeText(this, "Item2", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Clicked Soporte", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.nav_item_three -> {
-                Toast.makeText(this, "Item3", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Clicked Contactenos", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.nav_item_four -> {
-                Toast.makeText(this, "Item4", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Clicked Ayuda", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.nav_item_five -> {
-                Toast.makeText(this, "Item5", Toast.LENGTH_SHORT).show()
+                System.exit(0)
                 true
             }
             else -> super.onOptionsItemSelected(item)

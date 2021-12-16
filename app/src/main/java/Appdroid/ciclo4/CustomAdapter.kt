@@ -24,8 +24,8 @@ class CustomAdapter(
         "MUSEUM MADAME TUSSAUDS",
         "ONE WORLD OBSERVATORY",
         "911 MUSEUM",
-        "EDGE",
-        "CONFIG"
+        "EDGE"
+
     )
 
     val details = arrayOf(
@@ -33,8 +33,8 @@ class CustomAdapter(
         "Madame Tussauds New York es una atracción turística ubicada en 42nd Stree.",
         "Mirador que va de la planta 100 a la 102 del One World Trade Center, con exposiciones y restaurantes.",
         "El 9/11 National Memorial, es un museo en homenaje al 11 de septiembre de 1973",
-        "Mirador que sobresale del piso 100, con suelo de cristal, bar y vistas panorámicas de NY.",
-        "Configuracion"
+        "Mirador que sobresale del piso 100, con suelo de cristal, bar y vistas panorámicas de NY."
+
     )
 
     val images = intArrayOf(
@@ -42,8 +42,7 @@ class CustomAdapter(
         R.mipmap.ic_poi2_foreground,
         R.mipmap.ic_poi3_foreground,
         R.mipmap.ic_poi4_foreground,
-        R.mipmap.ic_poi5_foreground,
-        R.mipmap.ic_config_foreground
+        R.mipmap.ic_poi5_foreground
     )
 
     val stars = arrayOf(
@@ -51,8 +50,7 @@ class CustomAdapter(
         4.4f,
         4.7f,
         4.6f,
-        4.6f,
-        0.0f,
+        4.6f
     )
 
     val starScore = arrayOf(
@@ -60,8 +58,7 @@ class CustomAdapter(
         "4.4",
         "4.7",
         "4.6",
-        "4.6",
-        "0.0",
+        "4.6"
     )
 
     val cardColor = intArrayOf(
@@ -70,7 +67,7 @@ class CustomAdapter(
         android.graphics.Color.parseColor("#A9DFF1"),
         android.graphics.Color.parseColor("#8DD4ED"),
         android.graphics.Color.parseColor("#70C9E8"),
-        android.graphics.Color.parseColor("#65b5d1"),
+
     )
 
 
@@ -136,11 +133,7 @@ class CustomAdapter(
                     val inte = Intent(contexto, PoiActivity5::class.java)
                     contexto.startActivity(inte)
 
-                }else if ((itemTitle.text).equals("CONFIG")) {
-                    val inte = Intent(contexto, SettingsActivity::class.java)
-                    contexto.startActivity(inte)
                 }
-
 
             }
         }
