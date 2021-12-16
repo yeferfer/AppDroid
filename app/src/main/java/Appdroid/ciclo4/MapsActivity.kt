@@ -17,15 +17,13 @@ import android.content.Intent
 internal class MapsActivity: AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
-    private var lat: Double = 0.0
-    private var long: Double = 0.0
+    private var lat: Double? = null
+    private var long: Double? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
-        val intent = intent
-        lat = intent.getDoubleExtra("lat", 0.0)
-        long = intent.getDoubleExtra("long", 0.0)
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.mapView) as? SupportMapFragment
@@ -42,10 +40,13 @@ internal class MapsActivity: AppCompatActivity(), OnMapReadyCallback {
      * installed Google Play services and returned to the app.
      */
     override fun onMapReady(googleMap: GoogleMap) {
+        val intent = intent
+        lat = intent.getDoubleExtra("lat",40.6892 )
+        long = intent.getDoubleExtra("long",-74.0445)
         mMap = googleMap
 
         // Add a marker and move the camera
-        val marker = LatLng(lat, long)
+        val marker = LatLng(lat!!, long!!)
         mMap.addMarker(MarkerOptions()
             .position(marker)
             .title("Marker"))
