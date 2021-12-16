@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/nav_header"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
-    android:background="#227c9d"
+    android:layout_height="140dp"
+    android:background="#70c9e8"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?attr/selectableItemBackgroundBorderless"
@@ -17,15 +17,21 @@
         android:id="@+id/nav_header_imageView"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@mipmap/ic_menuh_foreground"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        />
 
     <TextView
         android:id="@+id/nav_header_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
         android:paddingTop="16dp"
         android:text="New York Travel"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black" />
 
 
 

@@ -1,15 +1,13 @@
 package Appdroid.ciclo4
 
-import Appdroid.ciclo4.datos.InfoPoi
 import Appdroid.ciclo4.archivojson.ControladorArchivoJson
+import Appdroid.ciclo4.datos.InfoPoi
 import android.content.res.Configuration
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -32,7 +30,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
 
         //Informacion archivo Json
-
         archivo = File(this.applicationContext.filesDir, nombreArchivo)
         if (archivo!!.exists()) {
             archivo!!.createNewFile()

@@ -1,15 +1,19 @@
 package Appdroid.ciclo4
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.text.style.BackgroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.RatingBar
-import android.widget.TextView
+import android.widget.*
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat.startActivity
+import androidx.core.graphics.convertTo
+import androidx.core.graphics.drawable.toDrawable
 import androidx.recyclerview.widget.RecyclerView
+import android.graphics.Color as Color1
 
 class CustomAdapter(
     private val contexto: Context
@@ -56,11 +60,11 @@ class CustomAdapter(
     )
 
     val cardColor = intArrayOf(
-        R.drawable.custom_button_poi1,
-        R.drawable.custom_button_poi2,
-        R.drawable.custom_button_poi3,
-        R.drawable.custom_button_poi4,
-        R.drawable.custom_button_poi5,
+        android.graphics.Color.parseColor("#E2F4FA"),
+        android.graphics.Color.parseColor("#C6E9F6"),
+        android.graphics.Color.parseColor("#A9DFF1"),
+        android.graphics.Color.parseColor("#8DD4ED"),
+        android.graphics.Color.parseColor("#70C9E8"),
     )
 
 
@@ -79,7 +83,7 @@ class CustomAdapter(
         viewHolder.itemImage.setImageResource(images[i])
         viewHolder.itemStar.rating = stars[i]
         viewHolder.itemStarScore.text = starScore[i]
-
+        viewHolder.colorCard2.setCardBackgroundColor(cardColor[i])
     }
 
     override fun getItemCount(): Int {
@@ -92,6 +96,8 @@ class CustomAdapter(
         var itemDetail: TextView
         var itemStar: RatingBar
         var itemStarScore: TextView
+        var colorcard: RelativeLayout
+        var colorCard2: CardView
 
         init {
             itemImage = itemView.findViewById(R.id.item_image)
@@ -99,25 +105,28 @@ class CustomAdapter(
             itemDetail = itemView.findViewById(R.id.item_description)
             itemStar = itemView.findViewById(R.id.starCard)
             itemStarScore = itemView.findViewById(R.id.starScore)
+            colorcard = itemView.findViewById(R.id.relativeColor)
+            colorCard2 = itemView.findViewById(R.id.card_view)
 
             itemView.setOnClickListener {
                 if ((itemTitle.text).equals("STATUE OF LIBERTY")) {
                     val inte = Intent(contexto, PoiActivity1::class.java)
                     contexto.startActivity(inte)
+
                     // println(" impresion " + itemTitle.text)
-                }else if ((itemTitle.text).equals("MUSEUM MADAME TUSSAUDS")) {
+                } else if ((itemTitle.text).equals("MUSEUM MADAME TUSSAUDS")) {
                     val inte = Intent(contexto, PoiActivity2::class.java)
                     contexto.startActivity(inte)
 
-                }else if ((itemTitle.text).equals("ONE WORLD OBSERVATORY")) {
+                } else if ((itemTitle.text).equals("ONE WORLD OBSERVATORY")) {
                     val inte = Intent(contexto, PoiActivity3::class.java)
                     contexto.startActivity(inte)
 
-                }else if ((itemTitle.text).equals("911 MUSEUM")) {
+                } else if ((itemTitle.text).equals("911 MUSEUM")) {
                     val inte = Intent(contexto, PoiActivity4::class.java)
                     contexto.startActivity(inte)
 
-                }else if ((itemTitle.text).equals("EDGE")) {
+                } else if ((itemTitle.text).equals("EDGE")) {
                     val inte = Intent(contexto, PoiActivity5::class.java)
                     contexto.startActivity(inte)
 
@@ -127,7 +136,9 @@ class CustomAdapter(
             }
         }
 
-
     }
 }
+
+
+
 
