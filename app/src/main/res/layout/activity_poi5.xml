@@ -26,23 +26,29 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/Edge_image"
-            android:layout_width="wrap_content"
-            android:layout_height="250dp"
-            android:layout_margin="10dp"
-            android:scaleType="fitXY"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            android:src="@drawable/edge"
-            app:layout_collapseMode="parallax" />
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:autoPlay="true"
+                app:fillColor="@color/white"
+                app:pageColor="@color/black"
+                app:radius="6dp"
+                app:slideInterval="4000"
+                app:strokeColor="#FF777777"
+                app:strokeWidth="1dp" />
+        </RelativeLayout>
 
         <Button
             android:id="@+id/button"
             android:layout_width="171dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/custom_button"
             android:elevation="10dp"
             android:text="Ubicar"
@@ -53,8 +59,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
             android:background="@drawable/custom_button_poi5"
-            android:layout_marginTop="40dp"
             android:orientation="vertical">
 
             <TextView
