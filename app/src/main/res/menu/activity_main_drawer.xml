@@ -4,27 +4,28 @@
     <group>
         <item
             android:id="@+id/nav_config"
-            android:title="Configuracion" />
+            android:title="@string/configuracion" />
     </group>
 
     <group>
         <item
             android:id="@+id/nav_item_one"
-            android:title="Perfil" />
+            android:title="@string/perfil" />
         <item
             android:id="@+id/nav_item_two"
-            android:title="Soporte" />
+            android:title="@string/soporte" />
     </group>
 
     <group android:id="@+id/group_menu">
         <item
             android:id="@+id/nav_item_three"
-            android:title="Contactenos" />
+            android:title="@string/contactenos" />
         <item
             android:id="@+id/nav_item_four"
-            android:title="Ayuda" />
+            android:title="@string/ayuda" />
         <item
             android:id="@+id/nav_item_five"
-            android:title="Cerrar" />
+            android:title="@string/cerrar" />
     </group>
+
 </menu>

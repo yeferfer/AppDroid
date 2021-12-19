@@ -2,7 +2,6 @@
 
     <PreferenceCategory app:title="@string/config_header">
 
-
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/notificaciones_header">

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -22,8 +23,10 @@
             android:layout_alignTop="@id/item_title"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="10dp"
+            android:contentDescription="@string/todo"
             android:scaleX="2"
-            android:scaleY="2" />
+            android:scaleY="2"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/item_title"
@@ -32,7 +35,7 @@
             android:layout_marginTop="-6dp"
             android:fontFamily="@font/poppins_bold"
             android:gravity="center"
-            android:text="POI"
+            android:text="@string/poi"
             android:textColor="@color/black"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -46,7 +49,7 @@
             android:layout_toEndOf="@id/item_image"
             android:fontFamily="@font/poppins_medium"
             android:paddingRight="10dp"
-            android:text="Descripción"
+            android:text="@string/descripci_n"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -80,7 +83,7 @@
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/star"
             android:fontFamily="@font/ubuntu"
-            android:text="Score"
+            android:text="@string/score"
             android:textColor="@color/black" />
 
     </RelativeLayout>

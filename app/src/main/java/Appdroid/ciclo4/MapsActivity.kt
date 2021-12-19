@@ -1,19 +1,17 @@
 package Appdroid.ciclo4
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
+import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import android.content.Intent
-import android.view.WindowManager
 
 
-internal class MapsActivity: AppCompatActivity(), OnMapReadyCallback {
+internal class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
     private var lat: Double? = null
@@ -24,7 +22,7 @@ internal class MapsActivity: AppCompatActivity(), OnMapReadyCallback {
         setContentView(R.layout.activity_maps)
 
         //Pantalla completa
-        this.getWindow().setFlags(
+        this.window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
@@ -46,15 +44,17 @@ internal class MapsActivity: AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         val intent = intent
-        lat = intent.getDoubleExtra("lat",40.6892 )
-        long = intent.getDoubleExtra("long",-74.0445)
+        lat = intent.getDoubleExtra("lat", 40.6892)
+        long = intent.getDoubleExtra("long", -74.0445)
         mMap = googleMap
 
         // Add a marker and move the camera
         val marker = LatLng(lat!!, long!!)
-        mMap.addMarker(MarkerOptions()
-            .position(marker)
-            .title("Marker"))
+        mMap.addMarker(
+            MarkerOptions()
+                .position(marker)
+                .title("Marker")
+        )
         mMap.moveCamera(CameraUpdateFactory.newLatLng(marker))
     }
 }

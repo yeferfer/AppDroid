@@ -2,17 +2,15 @@ package Appdroid.ciclo4
 
 import Appdroid.ciclo4.archivojson.ControladorArchivoJson
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.lottie.LottieAnimationView
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
-import com.synnapps.carouselview.CarouselView
 import java.io.File
 
 class PoiActivity5 : AppCompatActivity() {
@@ -26,7 +24,7 @@ class PoiActivity5 : AppCompatActivity() {
         setContentView(R.layout.activity_poi5)
 
         //Pantalla completa
-        this.getWindow().setFlags(
+        this.window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
@@ -55,7 +53,7 @@ class PoiActivity5 : AppCompatActivity() {
         //Mostrar mapa
         val btnMap = findViewById<LottieAnimationView>(R.id.animationView5)
         btnMap.setOnClickListener {
-            var latIntent = Intent(this@PoiActivity5, MapsActivity::class.java)
+            val latIntent = Intent(this@PoiActivity5, MapsActivity::class.java)
             latIntent.putExtra("lat", 40.7559)
             latIntent.putExtra("long", -74.0005)
             startActivity(latIntent)

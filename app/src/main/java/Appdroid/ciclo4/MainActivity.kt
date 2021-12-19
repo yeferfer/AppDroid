@@ -3,27 +3,26 @@ package Appdroid.ciclo4
 import Appdroid.ciclo4.archivojson.ControladorArchivoJson
 import Appdroid.ciclo4.datos.InfoPoi
 import android.content.Intent
-import android.content.res.Configuration
 import android.os.Bundle
-import android.view.*
-import android.widget.Button
+import android.view.MenuItem
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 import java.io.File
+import kotlin.system.exitProcess
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-    private lateinit var drawer: DrawerLayout
+class MainActivity : AppCompatActivity() {
+
     private lateinit var toggle: ActionBarDrawerToggle
 
     private var listaPoi = mutableListOf<InfoPoi>()
-    val nombreArchivo = "pois.txt"
+    private val nombreArchivo = "pois.txt"
     private val controlJson = ControladorArchivoJson()
     private var archivo: File? = null
 
@@ -33,7 +32,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
 
         //Pantalla completa
-        this.getWindow().setFlags(
+        this.window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
@@ -78,89 +77,60 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
-        /**** Para la implementacion de la barra de navegacion (Parte superior) y el menu deslizable desde la izquierda ****/
-
-        val toolbar: Toolbar = findViewById(R.id.toolbar_main)
+        //Menu hamburguesa
+        val toolbar: Toolbar? = findViewById(R.id.toolbar_main)
         setSupportActionBar(toolbar)
-
-        drawer = findViewById(R.id.drawer_layout)
-
+        val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
         toggle = ActionBarDrawerToggle(
             this,
-            drawer,
+            drawerLayout,
             toolbar,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
-        drawer.addDrawerListener(toggle)
+        drawerLayout.addDrawerListener(toggle)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
 
-        val navigationView: NavigationView = findViewById(R.id.nav_view)
-        navigationView.setNavigationItemSelectedListener(this)
-
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.activity_main_drawer, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item:MenuItem): Boolean {
-        // Handle item selection
-        return when (item.itemId) {
-            R.id.nav_config -> {
-                startActivity(Intent( this, SettingsActivity::class.java))
-                true
-            }
-            R.id.nav_item_one -> {
-                Toast.makeText(this, "Clicked Perfil", Toast.LENGTH_SHORT).show()
-                true
-            }
-            R.id.nav_item_two -> {
-                Toast.makeText(this, "Clicked Soporte", Toast.LENGTH_SHORT).show()
-                true
-            }
-            R.id.nav_item_three -> {
-                Toast.makeText(this, "Clicked Contactenos", Toast.LENGTH_SHORT).show()
-                true
-            }
-            R.id.nav_item_four -> {
-                Toast.makeText(this, "Clicked Ayuda", Toast.LENGTH_SHORT).show()
-                true
-            }
-            R.id.nav_item_five -> {
-                System.exit(0)
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
-
-    /**** Aca se configura la navegacion de los items del menú desplegable desde la izquierda ****/
-
-    override fun onPostCreate(savedInstanceState: Bundle?) {
-        super.onPostCreate(savedInstanceState)
         toggle.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        val navView = findViewById<NavigationView>(R.id.navView)
+        navView.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.nav_config -> startActivity(Intent(this, SettingsActivity::class.java))
+                R.id.nav_item_one -> Toast.makeText(
+                    applicationContext,
+                    "Click Perfil",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_item_two -> Toast.makeText(
+                    applicationContext,
+                    "Click Soporte",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_item_three -> Toast.makeText(
+                    applicationContext,
+                    "Click Contactenos",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_item_four -> Toast.makeText(
+                    applicationContext,
+                    "Click Ayuda",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_item_five -> exitProcess(0)
+            }
+            true
+        }
+
     }
 
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-        toggle.onConfigurationChanged(newConfig)
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (toggle.onOptionsItemSelected(item)) {
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        TODO("Not yet implemented")
-    }
-
-
-    /*  override fun onBackPressed() {
-          if (drawer.isDrawerOpen(GravityCompat.START)) {
-              drawer.closeDrawer(GravityCompat.START)
-          } else {
-              super.onBackPressed()
-          }
-      }*/
 
 }

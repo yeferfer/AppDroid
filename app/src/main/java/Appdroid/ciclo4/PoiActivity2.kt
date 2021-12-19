@@ -2,17 +2,15 @@ package Appdroid.ciclo4
 
 import Appdroid.ciclo4.archivojson.ControladorArchivoJson
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.lottie.LottieAnimationView
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
-import com.synnapps.carouselview.CarouselView
 import java.io.File
 
 class PoiActivity2 : AppCompatActivity() {
@@ -26,7 +24,7 @@ class PoiActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_poi2)
 
         //Pantalla completa
-        this.getWindow().setFlags(
+        this.window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
@@ -35,9 +33,9 @@ class PoiActivity2 : AppCompatActivity() {
         archivo = File(this.applicationContext.filesDir, "pois.txt")
         val titulo = findViewById<TextView>(R.id.museo)
         val descripcion = findViewById<TextView>(R.id.museum_description)
-        val datos = controlJson.llamar(archivo!!,1)
-        titulo.text=datos[0]
-        descripcion.text=datos[1]
+        val datos = controlJson.llamar(archivo!!, 1)
+        titulo.text = datos[0]
+        descripcion.text = datos[1]
 
         //Ir inicio
         val btninicio21 = findViewById<LottieAnimationView>(R.id.btnVolver21)
@@ -56,7 +54,7 @@ class PoiActivity2 : AppCompatActivity() {
         //Mostrar mapa
         val btnMap = findViewById<LottieAnimationView>(R.id.animationView2)
         btnMap.setOnClickListener {
-            var latIntent = Intent(this@PoiActivity2,MapsActivity::class.java)
+            val latIntent = Intent(this@PoiActivity2, MapsActivity::class.java)
             latIntent.putExtra("lat", 40.7564)
             latIntent.putExtra("long", -73.9888)
             startActivity(latIntent)

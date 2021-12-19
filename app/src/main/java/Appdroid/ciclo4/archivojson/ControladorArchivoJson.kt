@@ -1,23 +1,21 @@
 package Appdroid.ciclo4.archivojson
 
-import android.widget.BaseExpandableListAdapter
+import Appdroid.ciclo4.datos.InfoPoi
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.BufferedReader
 import java.io.File
 import java.lang.reflect.Type
-import Appdroid.ciclo4.datos.InfoPoi
 
 class ControladorArchivoJson {
 
-    public fun guardarJsonEnArchivo(archivo: File, listaPoi: List<InfoPoi>): Unit {
+    fun guardarJsonEnArchivo(archivo: File, listaPoi: List<InfoPoi>) {
         val listaJson = converterListaPoiAJson(listaPoi)
         archivo.writeText(listaJson)
     }
 
     fun llamar(archivo: File, Indice: Int): ArrayList<String> {
         val controlJson = ControladorArchivoJson()
-        val nombreArchivo = "pois.txt"
         if (archivo.exists()) {
             archivo.createNewFile()
         }
@@ -32,7 +30,7 @@ class ControladorArchivoJson {
         return arrayDatos
     }
 
-    fun recuperarJsonDeArchivo(archivo: File): List<InfoPoi> {
+    private fun recuperarJsonDeArchivo(archivo: File): List<InfoPoi> {
         val br: BufferedReader = archivo.bufferedReader()
         val listaJson = br.use { it.readLine() }
         return reconstructJsonArrayAListInfoPoi(listaJson)
@@ -47,12 +45,12 @@ class ControladorArchivoJson {
     }
 
     private fun reconstructJsonAPoi(infoJson: String): InfoPoi {
-        return Gson().fromJson<InfoPoi>(infoJson, InfoPoi::class.java)
+        return Gson().fromJson(infoJson, InfoPoi::class.java)
     }
 
     private fun reconstructJsonArrayAListInfoPoi(poiArrayJson: String): List<InfoPoi> {
         val tipo: Type = object : TypeToken<List<InfoPoi>>() {}.type
-        return Gson().fromJson<List<InfoPoi>>(poiArrayJson, tipo)
+        return Gson().fromJson(poiArrayJson, tipo)
     }
 
 }

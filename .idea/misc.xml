@@ -3,98 +3,54 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../../../../layout/custom_preview.xml" value="0.209375" />
         <entry key="..\:/Ciclo4_Udea/AppDroid12/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.35333333333333333" />
         <entry key="..\:/Ciclo4_Udea/AppDroid12/app/src/main/res/drawable/ic_launcher_background.xml" value="0.35333333333333333" />
         <entry key="..\:/Ciclo4_Udea/AppDroid12/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Ciclo4_Udea/AppDroid12/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.35333333333333333" />
         <entry key="..\:/Mision TIC/Android/AppDroid/AppDroid/app/src/main/res/drawable/ic_launcher_background.xml" value="0.290625" />
         <entry key="..\:/Mision TIC/Android/AppDroid/AppDroid/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/drawable/custom_button.xml" value="0.15833333333333333" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/drawable/custom_button_poi1.xml" value="0.290625" />
+        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/drawable/custom_button.xml" value="0.264" />
+        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/drawable/custom_button_po1.xml" value="0.290625" />
         <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/drawable/custom_button_poi2.xml" value="0.290625" />
         <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/drawable/custom_button_poi3.xml" value="0.290625" />
         <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/drawable/custom_button_poi4.xml" value="0.290625" />
         <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/drawable/custom_button_poi5.xml" value="0.290625" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/drawable/custom_titulo_poi.xml" value="0.290625" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/drawable/custom_ubicar.xml" value="0.290625" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/drawable/ic_Menu_background.xml" value="0.15833333333333333" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/drawable/ic_menu_background.xml" value="0.15833333333333333" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/drawable/redondeado.xml" value="0.290625" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/layout/activity_main.xml" value="0.4" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/layout/activity_maps.xml" value="0.27447916666666666" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/layout/activity_poi1.xml" value="0.4" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/layout/activity_poi2.xml" value="0.264" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/layout/activity_poi3.xml" value="0.264" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/layout/activity_poi4.xml" value="0.264" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/layout/activity_poi5.xml" value="0.264" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/layout/app_bar_main.xml" value="0.264" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/layout/card_layout.xml" value="0.4" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/layout/nav_header_main.xml" value="0.4" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/layout/settings_activity.xml" value="0.16168478260869565" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/menu/activity_main_drawer.xml" value="0.264" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/mipmap-anydpi-v26/ic_Menu.xml" value="0.15833333333333333" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.290625" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/mipmap-anydpi-v26/ic_menuh.xml" value="0.290625" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/mipmap-anydpi-v26/ic_menuh_round.xml" value="0.290625" />
-        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/mipmap-anydpi-v26/ic_poi1.xml" value="0.290625" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/drawable/custom_button.xml" value="0.2911458333333333" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/drawable/custom_button_poi1.xml" value="0.3359375" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/layout/activity_maps.xml" value="0.275" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/layout/activity_poi1.xml" value="0.31979166666666664" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/layout/activity_poi2.xml" value="0.31979166666666664" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/layout/activity_poi3.xml" value="0.31979166666666664" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/layout/activity_poi4.xml" value="0.31979166666666664" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/layout/activity_poi5.xml" value="0.31979166666666664" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/layout/app_bar_main.xml" value="0.31979166666666664" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/layout/card_layout.xml" value="0.275" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/layout/mapsactivity.xml" value="0.31979166666666664" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/layout/nav_header_main.xml" value="0.31979166666666664" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/layout/settings_activity.xml" value="0.31979166666666664" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/menu/activity_main_drawer.xml" value="0.31979166666666664" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3359375" />
-        <entry key="..\:/Users/PC2/Documents/MIntic/CIclo 4/sprint 4/2/AppDroid/app/src/main/res/xml/root_preferences.xml" value="0.31979166666666664" />
+        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Mision TIC/Android/Proyecto/AppDroid/app/src/main/res/layout/activity_poi1.xml" value="0.264" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/drawable/custom_button.xml" value="0.15989583333333332" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/drawable/custom_button_poi1.xml" value="0.15989583333333332" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/drawable/custom_titulo_poi.xml" value="0.15989583333333332" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/drawable/ic_config_background.xml" value="0.15989583333333332" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/drawable/ic_volverr_background.xml" value="0.290625" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/font/poppins_bold.xml" value="0.17395833333333333" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout-v26/activity_poi1.xml" value="0.14375" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/activity_main.xml" value="0.2702702702702703" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/activity_maps.xml" value="0.14375" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/activity_navigation_drawer_main.xml" value="0.2" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/activity_poi1.xml" value="0.14375" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/activity_poi2.xml" value="0.14375" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/activity_poi3.xml" value="0.14375" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/activity_poi4.xml" value="0.14375" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/activity_poi5.xml" value="0.14375" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/app_bar_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/app_bar_navigation_drawer_main.xml" value="0.14375" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/card_layout.xml" value="0.14375" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/content_navigation_drawer_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/fragment_gallery.xml" value="0.14375" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/fragment_home.xml" value="0.2702702702702703" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/fragment_slideshow.xml" value="0.27447916666666666" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/nav_header_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/nav_header_navigation_drawer_main.xml" value="0.14375" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/layout/settings_activity.xml" value="0.176" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/menu/activity_main_drawer.xml" value="0.3883495145631068" />
+        <entry key="..\:/Mision TIC/Android/proyecto/AppDroid/app/src/main/res/menu/navigation_drawer_main.xml" value="0.14375" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.21041666666666667" />
-        <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.21041666666666667" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.15" />
-        <entry key="app/src/main/res/layout/activity_main6.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/layout/activity_main7.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_poi1.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/layout/activity_poi2.xml" value="0.18020833333333333" />
-        <entry key="app/src/main/res/layout/activity_poi3.xml" value="0.18020833333333333" />
-        <entry key="app/src/main/res/layout/activity_poi4.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/layout/activity_poi42.xml" value="0.18020833333333333" />
-        <entry key="app/src/main/res/layout/activity_poi5.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/layout/app_bar_main2.xml" value="0.3494791666666667" />
-        <entry key="app/src/main/res/layout/app_bar_main6.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/layout/app_bar_main7.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/layout/card_layout.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/layout/content_main2.xml" value="0.20572916666666666" />
-        <entry key="app/src/main/res/layout/content_main6.xml" value="0.3494791666666667" />
-        <entry key="app/src/main/res/layout/content_main7.xml" value="0.20572916666666666" />
-        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.3494791666666667" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3494791666666667" />
-        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/layout/nav_header_main6.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/layout/nav_header_main7.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/layout/settings_activity.xml" value="0.3494791666666667" />
-        <entry key="app/src/main/res/menu/activity_main6_drawer.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/menu/activity_main7_drawer.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/menu/main7.xml" value="0.19427083333333334" />
-        <entry key="app/src/main/res/menu/main_activity6.xml" value="0.3494791666666667" />
-        <entry key="app/src/main/res/menu/main_activity7.xml" value="0.33" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21041666666666667" />
-        <entry key="app/src/main/res/xml/root_preferences.xml" value="0.3494791666666667" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

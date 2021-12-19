@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.lottie.LottieAnimationView
@@ -13,7 +12,6 @@ import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import java.io.File
-import java.lang.reflect.Array
 
 
 class PoiActivity1 : AppCompatActivity() {
@@ -28,7 +26,7 @@ class PoiActivity1 : AppCompatActivity() {
         setContentView(R.layout.activity_poi1)
 
         //Pantalla completa
-        this.getWindow().setFlags(
+        this.window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
@@ -46,12 +44,12 @@ class PoiActivity1 : AppCompatActivity() {
         val btninicio11 = findViewById<LottieAnimationView>(R.id.btnVolver11)
         val btninicio12 = findViewById<Button>(R.id.btnVolver12)
 
-        btninicio11.setOnClickListener{
+        btninicio11.setOnClickListener {
             val regresa = Intent(this, MainActivity::class.java)
             startActivity(regresa)
         }
 
-        btninicio12.setOnClickListener{
+        btninicio12.setOnClickListener {
             val regresa = Intent(this, MainActivity::class.java)
             startActivity(regresa)
         }
@@ -76,7 +74,7 @@ class PoiActivity1 : AppCompatActivity() {
         myList.add(SlideModel(R.drawable.poi1_img5))
 
         val imageSlider = findViewById<ImageSlider>(R.id.slider1)
-        imageSlider.setImageList(myList,ScaleTypes.CENTER_CROP)
+        imageSlider.setImageList(myList, ScaleTypes.CENTER_CROP)
 
     }
 

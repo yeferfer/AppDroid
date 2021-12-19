@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">AppDroid</string>
 
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_close">Close</string>
     <string name="title_activity_settings">SettingsActivity</string>
@@ -20,4 +23,17 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="ubicar">UBICAR</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="volver">Volver</string>
+    <string name="todo">TODO</string>
+    <string name="poi">POI</string>
+    <string name="score">Score</string>
+    <string name="new_york_travel">NEW YORK TRAVEL</string>
+    <string name="configuracion">Configuracion</string>
+    <string name="perfil">Perfil</string>
+    <string name="soporte">Soporte</string>
+    <string name="contactenos">Contactenos</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="cerrar">Cerrar</string>
 </resources>
