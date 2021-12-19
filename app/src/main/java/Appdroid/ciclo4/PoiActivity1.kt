@@ -5,10 +5,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.synnapps.carouselview.CarouselView
+import com.airbnb.lottie.LottieAnimationView
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 import java.io.File
 import java.lang.reflect.Array
 
@@ -19,22 +22,6 @@ class PoiActivity1 : AppCompatActivity() {
     private val controlJson = ControladorArchivoJson()
     private var archivo: File? = null
 
-    //Carruser de imagenes
-    var sampleImages: IntArray = intArrayOf(
-        R.drawable.poi1_img1,
-        R.drawable.poi1_img2,
-        R.drawable.poi1_img3,
-        R.drawable.poi1_img4,
-        R.drawable.poi1_img5,
-    )
-
-    var cities = arrayOf(
-        "STATUE OF LIBERTY IMG 1",
-        "STATUE OF LIBERTY IMG 2",
-        "STATUE OF LIBERTY IMG 3",
-        "STATUE OF LIBERTY IMG 4",
-        "STATUE OF LIBERTY IMG 5",
-    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,16 +43,23 @@ class PoiActivity1 : AppCompatActivity() {
         descripcion.text = datos[1]
 
         //Ir inicio
-        val btninicio = findViewById<Button>(R.id.btnVolver1)
-        btninicio.setOnClickListener {
+        val btninicio11 = findViewById<LottieAnimationView>(R.id.btnVolver11)
+        val btninicio12 = findViewById<Button>(R.id.btnVolver12)
+
+        btninicio11.setOnClickListener{
+            val regresa = Intent(this, MainActivity::class.java)
+            startActivity(regresa)
+        }
+
+        btninicio12.setOnClickListener{
             val regresa = Intent(this, MainActivity::class.java)
             startActivity(regresa)
         }
 
         //Mostrar mapa
-        val btnMap = findViewById<Button>(R.id.button)
+        val btnMap = findViewById<LottieAnimationView>(R.id.animationView1)
         btnMap.setOnClickListener {
-            var latIntent = Intent(this@PoiActivity1, MapsActivity::class.java)
+            val latIntent = Intent(this@PoiActivity1, MapsActivity::class.java)
             latIntent.putExtra("lat", 40.6892)
             latIntent.putExtra("long", -74.0445)
             startActivity(latIntent)
@@ -74,17 +68,18 @@ class PoiActivity1 : AppCompatActivity() {
         }
 
         //Recorrer Carusel
-        val carouselView = findViewById<CarouselView>(R.id.carouselView)
-        carouselView.pageCount = cities.size
+        val myList = ArrayList<SlideModel>()
+        myList.add(SlideModel(R.drawable.poi1_img1))
+        myList.add(SlideModel(R.drawable.poi1_img2))
+        myList.add(SlideModel(R.drawable.poi1_img3))
+        myList.add(SlideModel(R.drawable.poi1_img4))
+        myList.add(SlideModel(R.drawable.poi1_img5))
 
-        carouselView.setImageListener { position, imageView ->
-            imageView.setImageResource(sampleImages[position])
-        }
-
-        carouselView.setImageClickListener { position ->
-            Toast.makeText(applicationContext, cities[position], Toast.LENGTH_SHORT).show()
-        }
+        val imageSlider = findViewById<ImageSlider>(R.id.slider1)
+        imageSlider.setImageList(myList,ScaleTypes.CENTER_CROP)
 
     }
+
 }
+
 

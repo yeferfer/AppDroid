@@ -9,6 +9,10 @@
         android:topLeftRadius="35dp"
         android:topRightRadius="35dp" />
 
+    <stroke
+        android:width="0.7dp"
+        android:color="@color/black" />
+
     <gradient
         android:endColor="#b8e4f4"
         android:startColor="#a9dff1" />

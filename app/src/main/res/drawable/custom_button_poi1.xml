@@ -10,9 +10,10 @@
         android:topLeftRadius="35dp"
         android:topRightRadius="35dp" />
 
-    <!-- Sombras
-    <stroke android:color="@color/black" android:width="1dp" />
-    -->
+    <!-- Sombras -->
+    <stroke
+        android:width="0.7dp"
+        android:color="@color/black" />
 
     <gradient
         android:endColor="#d4eff8"

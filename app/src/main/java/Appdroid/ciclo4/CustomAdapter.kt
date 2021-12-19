@@ -3,6 +3,7 @@ package Appdroid.ciclo4
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.media.Image
 import android.text.style.BackgroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.core.graphics.convertTo
 import androidx.core.graphics.drawable.toDrawable
 import androidx.recyclerview.widget.RecyclerView
+import com.airbnb.lottie.LottieAnimationView
 import android.graphics.Color as Color1
 
 class CustomAdapter(
@@ -140,6 +142,7 @@ class CustomAdapter(
 
     }
 }
+
 
 
 

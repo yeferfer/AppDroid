@@ -55,4 +55,8 @@ dependencies {
 
     //CarouselView
     implementation "com.synnapps:carouselview:0.1.5"
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
+
+    //Animaciones Lottie
+    implementation 'com.airbnb.android:lottie:4.2.2'
 }

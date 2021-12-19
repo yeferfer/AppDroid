@@ -8,6 +8,10 @@ import android.view.WindowManager
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.airbnb.lottie.LottieAnimationView
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 import com.synnapps.carouselview.CarouselView
 import java.io.File
 
@@ -16,23 +20,6 @@ class PoiActivity5 : AppCompatActivity() {
     //Archivos Json
     private val controlJson = ControladorArchivoJson()
     private var archivo: File? = null
-
-    //Carruser de imagenes
-    var sampleImages: IntArray = intArrayOf(
-        R.drawable.poi5_img1,
-        R.drawable.poi5_img2,
-        R.drawable.poi5_img3,
-        R.drawable.poi5_img4,
-        R.drawable.poi5_img5,
-    )
-
-    var cities = arrayOf(
-        "EDGE IMG 1",
-        "EDGE IMG 2",
-        "EDGE IMG 3",
-        "EDGE IMG 4",
-        "EDGE IMG 5",
-    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,14 +40,20 @@ class PoiActivity5 : AppCompatActivity() {
         descripcion.text = datos[1]
 
         //Ir inicio
-        val btninicio = findViewById<Button>(R.id.btnVolver5)
-        btninicio.setOnClickListener {
+        val btninicio51 = findViewById<LottieAnimationView>(R.id.btnVolver51)
+        btninicio51.setOnClickListener {
+            val regresa = Intent(this, MainActivity::class.java)
+            startActivity(regresa)
+        }
+
+        val btninicio52 = findViewById<Button>(R.id.btnVolver52)
+        btninicio52.setOnClickListener {
             val regresa = Intent(this, MainActivity::class.java)
             startActivity(regresa)
         }
 
         //Mostrar mapa
-        val btnMap = findViewById<Button>(R.id.button)
+        val btnMap = findViewById<LottieAnimationView>(R.id.animationView5)
         btnMap.setOnClickListener {
             var latIntent = Intent(this@PoiActivity5, MapsActivity::class.java)
             latIntent.putExtra("lat", 40.7559)
@@ -70,16 +63,15 @@ class PoiActivity5 : AppCompatActivity() {
             startActivity(gotoMap)
         }
 
-        //Recorrer Carusel
-        val carouselView = findViewById<CarouselView>(R.id.carouselView)
-        carouselView.pageCount = cities.size
+        //Carusel Imagenes
+        val myList = ArrayList<SlideModel>()
+        myList.add(SlideModel(R.drawable.poi5_img1))
+        myList.add(SlideModel(R.drawable.poi5_img2))
+        myList.add(SlideModel(R.drawable.poi5_img3))
+        myList.add(SlideModel(R.drawable.poi5_img4))
+        myList.add(SlideModel(R.drawable.poi5_img5))
 
-        carouselView.setImageListener { position, imageView ->
-            imageView.setImageResource(sampleImages[position])
-        }
-
-        carouselView.setImageClickListener { position ->
-            Toast.makeText(applicationContext, cities[position], Toast.LENGTH_SHORT).show()
-        }
+        val imageSlider = findViewById<ImageSlider>(R.id.slider5)
+        imageSlider.setImageList(myList, ScaleTypes.CENTER_CROP)
     }
 }
