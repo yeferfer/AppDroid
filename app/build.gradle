@@ -61,4 +61,7 @@ dependencies {
 
     //Animaciones Lottie
     implementation 'com.airbnb.android:lottie:4.2.2'
+
+    //Archivos Json BD
+
 }
