@@ -1,44 +1,39 @@
 {
   "poi": [
     {
-      "id": 1,
+      "id": 0,
       "titulo": "STATUE OF LIBERTY",
       "Descricion": "Nueva York cuenta con una temperatura aproximada de 6 Cº, incluye 5 distritos que se ubican donde el río Hudson desemboca en el océano Atlántico. En su centro se encuentra Manhattan, un distrito densamente poblado que se encuentra entre los principales centros comerciales, financieros y culturales del mundo. Sus sitios icónicos incluyen rascacielos, como el Empire State Building, y el amplio Central Park. El teatro Broadway se ubica en la zona del Times Square iluminada con neones.",
       "coordenadaslat":"40.6892",
       "coordenadaslong": "-74.0445"
     },
     {
-      "id": 2,
+      "id": 1,
       "titulo": "MUSEUM MADAME TUSSAUNDS",
       "Descricion": "El Museo Madame Tussauds es el museo de cera más conocido en el mundo. Posee la colección más grande de figuras de celebridades. La sede central del museo está en Londres, pero también hay establecimientos en otras grandes ciudades alrededor del mundo.",
       "coordenadaslat":"40.7564",
       "coordenadaslong": "-73.9888"
     },
     {
-      "id": 3,
+      "id": 2,
       "titulo": "ONE WORLD OBSERVATORY",
       "Descricion": "Situado en la parte baja de Manhattan, el Observatorio One World presenta un mirador de última generación a 102 pisos de altura. Viaja directamente a su cima en 47 segundos en el ascensor SkyPod y profundiza en la historia cultural y financiera de la ciudad con una serie de exposiciones interactivas e interesantes charlas dirigidas por los embajadores del tour.",
       "coordenadaslat":"40.7130",
       "coordenadaslong": "-74.0132"
     },
     {
-      "id": 4,
+      "id": 3,
       "titulo": "911 MUSEUM",
       "Descricion": "El centro está ubicado en el sitio del World Trade Center, en la misma ubicación de las Torres Gemelas destruidas en los ataques del 11 de septiembre de 2001. El World Trade Center Memorial Foundation cambió de nombre a National September 11 Memorial & Museum at the World Trade Center en 2007. El ganador del diseño para la competencia del World Trade Center Site Memorial fue el arquitecto israelí-estadounidense Michael Arad de Handel Architects, una firma de San Francisco y Nueva York. Arad trabajó con la firma de arquitectura paisajista Peter Walker and Partners en el diseño en el que lo llaman 'bosque de árboles' con dos piscinas gemelas en el centro, en los cimientos donde alguna vez estuvieron las Torres Gemelas.",
       "coordenadaslat":"40.7113",
       "coordenadaslong": "-74.0132"
     },
     {
-      "id": 5,
+      "id": 4,
       "titulo": "EDGE",
       "Descricion": "Edge es la nueva y emocionante atracción turística de la ciudad de Nueva York, situada en lo alto del fabuloso y reluciente rascacielos Hudson Yards. Subirás 100 pisos en su moderno ascensor y, después, podrás salir al aire libre en su amplio mirador para deleitarte con las vistas del horizonte más famoso del mundo.",
-      "coordenadaslat":"40.7559",
-      "coordenadaslong": "-74.0005"
-    }
-  ],
-  "elemap": [
-    {
-      "ele": "0"
+      "coordenadaslat":"40.7543087",
+      "coordenadaslong": "-74.0012623"
     }
   ]
 }

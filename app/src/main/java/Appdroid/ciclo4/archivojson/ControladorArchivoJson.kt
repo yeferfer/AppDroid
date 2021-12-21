@@ -15,7 +15,7 @@ class ControladorArchivoJson {
         archivo.writeText(listaJson)
     }
 
-    fun llamar(archivo: File, Indice: Int): ArrayList<String> {
+    fun llamar(archivo: File, Indice: Int?): ArrayList<String> {
         val controlJson = ControladorArchivoJson()
         if (archivo.exists()) {
             archivo.createNewFile()
@@ -24,7 +24,7 @@ class ControladorArchivoJson {
         val arrayDatos = arrayListOf<String>()
         arrayDatos.addAll(
             listOf(
-                (listarPoi[Indice].titulo.toString()),
+                (listarPoi[Indice!!].titulo.toString()),
                 (listarPoi[Indice].descripcion.toString()),
                 (listarPoi[Indice].coordenadaslat.toString()),
                 (listarPoi[Indice].coordenadaslong.toString())

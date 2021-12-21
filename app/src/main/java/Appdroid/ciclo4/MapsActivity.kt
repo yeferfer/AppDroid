@@ -1,9 +1,11 @@
 package Appdroid.ciclo4
 
 import Appdroid.ciclo4.archivojson.ControladorArchivoJson
+import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.airbnb.lottie.LottieAnimationView
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -12,6 +14,7 @@ import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import java.io.File
+import java.lang.IndexOutOfBoundsException
 
 
 internal class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -40,11 +43,18 @@ internal class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             .findFragmentById(R.id.mapView) as? SupportMapFragment
         mapFragment?.getMapAsync(this)
 
+        //Volver
+        val btnVolverMaps = findViewById<LottieAnimationView>(R.id.btnVolverMaps)
+        btnVolverMaps.setOnClickListener {
+            val regresa = Intent(this, MainActivity::class.java)
+            startActivity(regresa)
+        }
+
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
         val intent = intent
-        indice = intent.getIntExtra("inice", -1)
+        indice = intent.getIntExtra("indice", 8)
         //Documento Json
         archivo = File(this.applicationContext.filesDir, "pois.txt")
         val datos = controlJson.llamar(archivo!!, indice!!)
@@ -54,6 +64,18 @@ internal class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         long = intent.getDoubleExtra("long", longJson)
 
         mMap = googleMap
+
+        //Mapa Satelital
+        val animationView1 = findViewById<LottieAnimationView>(R.id.animationView1)
+        animationView1.setOnClickListener {
+            mMap.mapType = GoogleMap.MAP_TYPE_SATELLITE
+        }
+
+        //Mapa Normal
+        val animationView2 = findViewById<LottieAnimationView>(R.id.animationView2)
+        animationView2.setOnClickListener {
+            mMap.mapType = GoogleMap.MAP_TYPE_NORMAL
+        }
 
         // Add a marker and move the camera
         val marker = LatLng(lat!!, long!!)
@@ -71,6 +93,7 @@ internal class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             .build()
         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
     }
+
 }
 
       

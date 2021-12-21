@@ -54,7 +54,7 @@ class PoiActivity4 : AppCompatActivity() {
         val btnMap = findViewById<LottieAnimationView>(R.id.animationView4)
         btnMap.setOnClickListener {
             val latIntent = Intent(this@PoiActivity4,MapsActivity::class.java)
-            latIntent.putExtra("inice",3)
+            latIntent.putExtra("indice",3)
             startActivity(latIntent)
             val gotoMap = Intent(this, MapsActivity::class.java)
             startActivity(gotoMap)
