@@ -54,9 +54,8 @@ class PoiActivity2 : AppCompatActivity() {
         //Mostrar mapa
         val btnMap = findViewById<LottieAnimationView>(R.id.animationView2)
         btnMap.setOnClickListener {
-            val latIntent = Intent(this@PoiActivity2, MapsActivity::class.java)
-            latIntent.putExtra("lat", 40.7564)
-            latIntent.putExtra("long", -73.9888)
+            val latIntent = Intent(this@PoiActivity2,MapsActivity::class.java)
+            latIntent.putExtra("inice",1)
             startActivity(latIntent)
             val gotoMap = Intent(this, MapsActivity::class.java)
             startActivity(gotoMap)

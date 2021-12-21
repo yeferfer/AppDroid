@@ -3,6 +3,7 @@ package Appdroid.ciclo4.archivojson
 import Appdroid.ciclo4.datos.InfoPoi
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.File
 import java.lang.reflect.Type
@@ -24,7 +25,9 @@ class ControladorArchivoJson {
         arrayDatos.addAll(
             listOf(
                 (listarPoi[Indice].titulo.toString()),
-                (listarPoi[Indice].descripcion.toString())
+                (listarPoi[Indice].descripcion.toString()),
+                (listarPoi[Indice].coordenadaslat.toString()),
+                (listarPoi[Indice].coordenadaslong.toString())
             )
         )
         return arrayDatos

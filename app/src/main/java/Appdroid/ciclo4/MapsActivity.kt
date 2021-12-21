@@ -1,5 +1,6 @@
 package Appdroid.ciclo4
 
+import Appdroid.ciclo4.archivojson.ControladorArchivoJson
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
@@ -7,8 +8,10 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import java.io.File
 
 
 internal class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -16,6 +19,11 @@ internal class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
     private var lat: Double? = null
     private var long: Double? = null
+    private var indice: Int? = null
+
+    //Archivos Json
+    private val controlJson = ControladorArchivoJson()
+    private var archivo: File? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,21 +39,20 @@ internal class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.mapView) as? SupportMapFragment
         mapFragment?.getMapAsync(this)
+
     }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     override fun onMapReady(googleMap: GoogleMap) {
         val intent = intent
-        lat = intent.getDoubleExtra("lat", 40.6892)
-        long = intent.getDoubleExtra("long", -74.0445)
+        indice = intent.getIntExtra("inice", 8)
+        //Documento Json
+        archivo = File(this.applicationContext.filesDir, "pois.txt")
+        val datos = controlJson.llamar(archivo!!, indice!!)
+        val latJson: Double = datos[2].toDouble()
+        val longJson: Double = datos[3].toDouble()
+        lat = intent.getDoubleExtra("lat", latJson)
+        long = intent.getDoubleExtra("long", longJson)
+
         mMap = googleMap
 
         // Add a marker and move the camera
@@ -55,7 +62,14 @@ internal class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 .position(marker)
                 .title("Marker")
         )
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(marker))
+
+        val cameraPosition = CameraPosition.Builder()
+            .target(marker)
+            .zoom(17f)
+            .bearing(90f)
+            .tilt(30f)
+            .build()
+        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
     }
 }
 

@@ -4,7 +4,6 @@ import Appdroid.ciclo4.Model.PoiModelClass
 import Appdroid.ciclo4.archivojson.ControladorArchivoJson
 import Appdroid.ciclo4.datos.InfoPoi
 import android.content.Intent
-import android.media.audiofx.AudioEffect
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.WindowManager
@@ -59,9 +58,11 @@ class MainActivity : AppCompatActivity() {
                 val id = user.getInt("id")
                 val titulo = user.getString("titulo")
                 val Descricion = user.getString("Descricion")
-                val userDetails = PoiModelClass(id, titulo, Descricion)
+                val coordenadaslat = user.getString("coordenadaslat")
+                val coordenadaslong = user.getString("coordenadaslong")
+                val userDetails = PoiModelClass(id, titulo, Descricion,coordenadaslat,coordenadaslong)
                 listaPoi.add(
-                    InfoPoi(titulo, Descricion)
+                    InfoPoi(titulo, Descricion,coordenadaslat,coordenadaslong)
                 )
                 usersList.add(userDetails)
                 controlJson.guardarJsonEnArchivo(archivo!!, listaPoi)

@@ -21,6 +21,7 @@ class PoiActivity1 : AppCompatActivity() {
     private var archivo: File? = null
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_poi1)
@@ -57,9 +58,8 @@ class PoiActivity1 : AppCompatActivity() {
         //Mostrar mapa
         val btnMap = findViewById<LottieAnimationView>(R.id.animationView1)
         btnMap.setOnClickListener {
-            val latIntent = Intent(this@PoiActivity1, MapsActivity::class.java)
-            latIntent.putExtra("lat", 40.6892)
-            latIntent.putExtra("long", -74.0445)
+            val latIntent = Intent(this@PoiActivity1,MapsActivity::class.java)
+            latIntent.putExtra("indice",0)
             startActivity(latIntent)
             val gotoMap = Intent(this, MapsActivity::class.java)
             startActivity(gotoMap)
