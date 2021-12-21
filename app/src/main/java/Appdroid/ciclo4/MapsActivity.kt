@@ -44,7 +44,7 @@ internal class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         val intent = intent
-        indice = intent.getIntExtra("inice", 8)
+        indice = intent.getIntExtra("inice", -1)
         //Documento Json
         archivo = File(this.applicationContext.filesDir, "pois.txt")
         val datos = controlJson.llamar(archivo!!, indice!!)
