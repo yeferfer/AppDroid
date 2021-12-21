@@ -1,20 +1,39 @@
 <resources>
     <string name="app_name">AppDroid</string>
-    <string name="description_newyork">Nueva York cuenta con una temperatura aproximada de 6 Cº, incluye 5 distritos que se ubican donde el río Hudson desemboca
-en el océano Atlántico. En su centro se encuentra Manhattan, un distrito densamente
-poblado que se encuentra entre los principales centros comerciales, financieros y culturales del mundo.
-Sus sitios icónicos incluyen rascacielos, como el Empire State Building, y el amplio Central Park.
-El teatro Broadway se ubica en la zona del Times Square iluminada con neones.</string>
 
-    <string name="description_Madame">El Museo Madame Tussauds es el museo de cera más conocido en el mundo. Posee la colección más grande de figuras de celebridades.
-        La sede central del museo está en Londres, pero también hay establecimientos en otras grandes ciudades alrededor del mundo.</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 
-    <string name="description_Observatorio">Situado en la parte baja de Manhattan, el Observatorio One World presenta un mirador de última generación a 102 pisos de altura.
-        Viaja directamente a su cima en 47 segundos en el ascensor SkyPod y profundiza en la historia cultural y financiera de la ciudad con una serie de exposiciones interactivas e interesantes charlas dirigidas por los embajadores del tour.</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="title_activity_settings">SettingsActivity</string>
 
-    <string name="description_monumento">El monumento del 11 de septiembre, situado en la misma ubicación que el antiguo World Trade Center, rinde homenaje a las 2983 víctimas de los ataques de 2001 y 1993.</string>
+    <!-- Preference Titles -->
+    <string name="config_header">Configuración</string>
+    <string name="notificaciones_header">Notificaciones</string>
 
-    <string name="description_Edge">Edge es la nueva y emocionante atracción turística de la ciudad de Nueva York, situada en lo alto del fabuloso y reluciente rascacielos Hudson Yards. Subirás 100 pisos en su moderno ascensor y, después, podrás
-        salir al aire libre en su amplio mirador para deleitarte con las vistas del horizonte más famoso del mundo.</string>
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
 
+    <!-- Sync Preferences -->
+    <string name="notific_title">Notificaciones ON/OFF</string>
+    <string name="notificSound_title">Sonido Notificaciones ON/OFF</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="ubicar">UBICAR</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="volver">Volver</string>
+    <string name="todo">TODO</string>
+    <string name="poi">POI</string>
+    <string name="score">Score</string>
+    <string name="new_york_travel">NEW YORK TRAVEL</string>
+    <string name="configuracion">Configuracion</string>
+    <string name="perfil">Perfil</string>
+    <string name="soporte">Soporte</string>
+    <string name="contactenos">Contactenos</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="cerrar">Cerrar</string>
 </resources>

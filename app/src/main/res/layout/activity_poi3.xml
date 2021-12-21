@@ -1,81 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:fillViewport="true">
-
 
     <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:background="#EBEEFB"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/observatorio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="Observatorio One World"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/observatorio_image"
-            android:layout_width="wrap_content"
-            android:layout_height="250dp"
-            android:layout_margin="10dp"
-            android:scaleType="fitXY"
-
-            android:src="@drawable/observatorio"
-            app:layout_collapseMode="parallax" />
-
-
-        <TextView
-            android:id="@+id/observatorio_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="Descripción"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/Observatory_description"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="32dp"
-            android:justificationMode="inter_word"
-            android:text="@string/description_Observatorio"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:background="@drawable/custom_titulo_poi"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnVolver3"
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/btnVolver31"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/back" />
+
+            <TextView
+                android:id="@+id/observatorio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/slider3"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="15dp"
+                app:iss_auto_cycle="true"
+                app:iss_corner_radius="40"
+                app:iss_delay="0"
+                app:iss_error_image="@color/purple_700"
+                app:iss_period="3000"
+                app:iss_placeholder="@color/black" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_ubicar"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/area_map" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="@string/ubicar"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="Volver"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@drawable/custom_button"
-            android:elevation="10dp"
-            />
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="9dp"
+            android:background="@drawable/custom_button_poi3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/observatorio_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/descripci_n"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Observatory_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/ubuntu"
+                android:justificationMode="inter_word"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnVolver32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/custom_button"
+                android:elevation="10dp"
+                android:text="@string/volver"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/wold_map" />
+        </LinearLayout>
 
 
     </LinearLayout>
